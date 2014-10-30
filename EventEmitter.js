@@ -18,11 +18,15 @@ EventEmitter.prototype = {
   // Fonction permettant de reinitialiser la liste des événements
   off: function (ps_event, pf_func) {
     if(ps_event != undefined) {
-      if(pf_func != undefined) {
-        this.ca_events[ps_event].splice(this.ca_events[ps_event].indexOf(pf_func), 1);
-      }
-      else {
-        delete this.ca_events[ps_event];
+      if(this.ca_events.hasOwnProperty(ps_event)) {
+        if(pf_func != undefined) {
+          if(this.ca_events[ps_event].indexOf(pf_func) != -1) {
+            this.ca_events[ps_event].splice(this.ca_events[ps_event].indexOf(pf_func), 1);
+          }
+        }
+        else {
+          delete this.ca_events[ps_event];
+        }
       }
     }
     else {
