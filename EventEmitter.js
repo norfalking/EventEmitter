@@ -68,7 +68,7 @@ EventEmitter.prototype = {
 
 
 
-let eventEmitter = new EventEmitter(); // instanciation d'un EventEmitter
+/*let eventEmitter = new EventEmitter(); // instanciation d'un EventEmitter
 
 let x = function (){
   console.log('Test de la fonction on');
@@ -111,4 +111,4 @@ eventEmitter.times('onClick', 3, function (){
 .emit('onClick') // Affiche "Test de la fonction times"
 .emit('onClick') // Affiche "Test de la fonction times"
 .emit('onClick') // Affiche "Test de la fonction times"
-.emit('onClick'); // N'affiche rien
+.emit('onClick'); // N'affiche rien*/
